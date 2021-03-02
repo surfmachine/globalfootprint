@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
+
+    <!-- Bootstrap CSS (add first) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"  >
+    <!-- Noto Sans Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap">
+    <!-- Footprint Styles -->
+    <link rel="stylesheet" href="footprint.css">
+</head>
+
+<body>
+<div class="site">
+
+    <!-- Header and Controls -->
+    <div id="headerId" class="container-xxl">
+        <div class="row headerTitle">
+            <div class="col-md-3 col-sm-12">&nbsp;</div>
+            <div class="col-md-6 col-sm-12">
+                <h1>Global Footprint</h1>
+            </div>
+            <div class="col-md-3 col-sm-12">&nbsp;</div>
+        </div>
+        <div class="row headerSubtitle">
+            <div class="col-md-1 col-sm-1 d-flex justify-content-start">
+            </div>
+
+            <div class="col-md-10 col-sm-10">
+                <h4>Number of earth per year.</h4>
+            </div>
+
+            <div class="col-md-1 col-sm-1">
+                <button class="btn btn-sm btn-outline-primary border-0 shadow-none"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseControl2"
+                        aria-expanded="true" aria-controls="collapseControl2">
+                    <i class="bi bi-sliders"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row  headerControl">
+            <div class="col-md-12 d-flex justify-content-center">
+                <!-- Open collapse per default: add class "show" and set aria-expanded="true" on the button -->
+                <!-- Control 2 -->
+                <div class="collapse show" id="collapseControl2">
+
+                    <div class="btn-group" role="groupSize" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="size" id="xSize" autocomplete="off" disabled>
+                        <label class="btn btn-primary btn-xs" for="xSize">Size</label>
+
+                        <input type="radio" class="btn-check" name="size" id="lSize" autocomplete="off" value="l" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="lSize">L</label>
+
+                        <input type="radio" class="btn-check" name="size" id="mSize" autocomplete="off" checked value="m" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="mSize">M</label>
+
+                        <input type="radio" class="btn-check" name="size" id="sSize" autocomplete="off" value="s" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="sSize">S</label>
+                    </div>
+                    &nbsp;
+                    <div class="btn-group" role="groupMode" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="mode" id="btnMode0" autocomplete="off" disabled>
+                        <label class="btn btn-primary shadow-none btn-xs" for="btnMode0">Mode</label>
+
+                        <input type="radio" class="btn-check" name="mode" id="cleanMode" autocomplete="off" value="clean" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="cleanMode">Plain</label>
+
+                        <input type="radio" class="btn-check" name="mode" id="diffMode" autocomplete="off" checked value="diff" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="diffMode">Diff</label>
+
+                        <input type="radio" class="btn-check" name="mode" id="fillMode" autocomplete="off" value="fill" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="fillMode">Fill</label>
+                    </div>
+                    &nbsp;
+                    <div class="btn-group" role="groupScale" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="scale" id="btnScale0" autocomplete="off" disabled>
+                        <label class="btn btn-primary shadow-none btn-xs" for="btnScale0">Scale</label>
+
+                        <input type="radio" class="btn-check" name="scale" id="absScale" autocomplete="off" checked value="i" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="absScale">Individual</label>
+
+                        <input type="radio" class="btn-check" name="scale" id="relScale" autocomplete="off" value="c" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="relScale">Compare</label>
+                    </div>
+                    &nbsp;
+                    <div class="btn-group" role="groupAxis" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="axis" id="btnAxis0" autocomplete="off" disabled>
+                        <label class="btn btn-primary shadow-none btn-xs" for="btnAxis0">Scale</label>
+
+                        <input type="radio" class="btn-check" name="axis" id="trueAxis" autocomplete="off" checked value="true" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="trueAxis">On</label>
+
+                        <input type="radio" class="btn-check" name="axis" id="falseAxis" autocomplete="off" value="false" onclick="handleOptionClick(this)">
+                        <label class="btn btn-outline-primary shadow-none btn-xs" for="falseAxis">Off</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Charts -->
+    <div class="container-xxl">
+        <div id="charts" class="row">
+            <!-- The div elements for the single charts are added dynamically -->
+        </div>
+    </div>
+
+    <div class="footer">
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- D3 Bundle -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="footprint.js"></script>
+
+</div>
+</body>
+</html>
+

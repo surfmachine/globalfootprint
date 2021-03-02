@@ -1,0 +1,140 @@
+/* ------ The footprint CSS ------ */
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+}
+
+.site {
+    margin: auto;
+    width: 90%;
+}
+
+
+.headerTitle {
+    margin: 0;
+    margin-top: 1em;
+}
+
+.headerSubtitle {
+    margin: 0;
+}
+
+.headerControl {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    margin: 0;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.btn-xs
+{
+    padding: 1px 5px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+.footer {
+    margin-bottom: 1em;
+}
+
+/* ------ Controls ------ */
+
+.controls {
+    margin-top: 3em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.controls span {
+    margin: 1em;
+}
+
+.controls input[type="radio"] {
+    margin-top: 1px!important;
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+/* ------- Chart ------ */
+
+.title {
+    font-family: "Noto Sans";
+    font-weight: bold;
+}
+.title.large {
+    font-size: 24px;
+}
+.title.medium {
+    font-size: 16px;
+}
+.title.small {
+    font-size: 12px;
+}
+
+.subtitle {
+    font-family: "Noto Sans";
+    font-weight: normal;
+}
+.subtitle.large {
+    margin-top: 12px;
+    font-size: 12px;
+}
+.subtitle.medium {
+    font-size: 8px;
+}
+.subtitle.small {
+    font-size: 6px;
+}
+
+.xAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.xAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.xAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}
+
+.yAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.yAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.yAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}

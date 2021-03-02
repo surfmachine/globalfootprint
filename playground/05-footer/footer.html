@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1 0 auto;
+        }
+        .footer {
+            background-color: silver;
+            flex-shrink: 0;
+        }
+
+    </style>
+
+</head>
+
+<!--
+    Reference:
+    https://css-tricks.com/couple-takes-sticky-footer/
+-->
+
+<body>
+    <div class="content">
+        <h1>Footer test page with little content</h1>
+        <p>Hello World.</p>
+    </div>
+
+    <footer class="footer">
+        <p>Your content here</p>
+        <p>Your content here</p>
+    </footer>
+
+</body>
+</html>

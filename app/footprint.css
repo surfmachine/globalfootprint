@@ -1,0 +1,384 @@
+/* ------ The footprint CSS ------ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.frame {
+    margin: auto;
+    width: 96%;
+}
+
+/* ------ Header ------ */
+
+.headerTitle {
+    margin: 0;
+    margin-top: 1.5em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.headerSubtitle {
+    margin: 0;
+    padding-bottom: 6px;
+}
+
+.headerSubtitleText {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+/* ------ info ------ */
+
+.info {
+    margin: 12px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 12px;
+    padding-bottom: 0px;
+    font-size: 14px;
+}
+
+.infoTeaserPanel {
+    margin-bottom: 0px;
+}
+
+.infoTeaser {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.infoPanel {
+    margin-bottom: 0px;
+}
+
+.infoSubtitle {
+    font-weight: bold;
+}
+
+a.infoLink  {
+    color: black;
+    text-decoration: underline;
+}
+a:link.infoLink {
+    color: black;
+}
+a:visited.infoLink {
+    color: black;
+}
+a:hover.infoLink {
+    color:black;
+    font-weight: bold;
+}
+a:active.infoLink {
+    color: black;
+}
+
+/* ------ Control ------ */
+
+.control {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 12px;
+    color: black;
+}
+
+.controlGroup {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+}
+
+.controlTitle {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+    font-weight: bold;
+}
+
+.controlPair {
+    margin-right: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0px;
+}
+
+.control input[type="radio"] {
+    margin-top: 5px;
+    margin-left: 6px;
+    margin-right: 2px;
+    width: 9px;
+    height: 9px;
+}
+
+input[type="radio"]:checked {
+    background-image: none!important;
+    background-color: #595959; /* #747a7d; */
+    border: 1px solid #595959; /*#747a7d;*/
+}
+
+input[type="radio"]:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 5px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:focus {
+    box-shadow: none;
+}
+
+
+/* ------ Footer ------ */
+
+.footer {
+    flex-shrink: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 11px;
+    background-color: #1e1e1e;
+}
+
+.footerArea {
+    font-size: 12px;
+    color: #888888;
+}
+
+/* Important keep order: link, visited, hover, active, focus */
+a {
+    text-decoration: none;
+    color: #888888;
+}
+a:link {
+    color: #A8A8A8;
+}
+a:visited {
+    color: #A8A8A8;;
+}
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+a:active {
+    color: #A8A8A8;
+}
+
+.footerBtn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #A8A8A8;
+}
+.footerBtn:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.footerBtn:active {
+    border: none;
+}
+.footerBtn:visited {
+    border: none;
+}
+.footerBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ------ Impressum ------ */
+
+.impressum {
+    color: #888888;
+    background-color:#1e1e1e;
+}
+
+.impressumTitle {
+    color: gainsboro;
+}
+
+.impressumSubtitle {
+    color: #D3D3D3;
+}
+
+/* ------- Charts ------ */
+
+#charts {
+    margin-top: 6px;
+}
+
+.title {
+    font-family: "Noto Sans";
+    font-weight: 500;
+}
+.title.large {
+    font-size: 24px;
+}
+.title.medium {
+    font-size: 16px;
+}
+.title.small {
+    font-size: 10px;
+}
+
+.subtitle {
+    font-family: "Noto Sans";
+    font-weight: normal;
+}
+.subtitle.large {
+    margin-top: 12px;
+    font-size: 12px;
+}
+.subtitle.medium {
+    font-size: 8px;
+}
+.subtitle.small {
+    font-size: 6px;
+}
+
+.value {
+    font-family: "Noto Sans";
+    font-weight: 700;
+}
+
+.value.large {
+    font-size: 60px;
+}
+.value.large.a {
+    font-size: 30px;
+}
+.value.large.b {
+    font-size: 38px;
+}
+.value.large.c {
+    font-size: 46px;
+}
+.value.large.d {
+    font-size: 54px;
+}
+.value.large.e {
+    font-size: 62px;
+}
+.value.large.f {
+    font-size: 70px;
+}
+
+.value.medium {
+    font-size: 30px;
+}
+.value.medium.a {
+    font-size: 16px;
+}
+.value.medium.b {
+    font-size: 20px;
+}
+.value.medium.c {
+    font-size: 24px;
+}
+.value.medium.d {
+    font-size: 28px;
+}
+.value.medium.e {
+    font-size: 32px;
+}
+.value.medium.f {
+    font-size: 36px;
+}
+
+.value.small {
+    font-size: 15px;
+}
+.value.small.a {
+    font-size: 8px;
+}
+.value.small.b {
+    font-size: 10px;
+}
+.value.small.c {
+    font-size: 12px;
+}
+.value.small.d {
+    font-size: 14px;
+}
+.value.small.e {
+    font-size: 16px;
+}
+.value.small.f {
+    font-size: 18px;
+}
+
+.xAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.xAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.xAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}
+
+.yAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.yAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.yAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}

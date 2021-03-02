@@ -1,0 +1,188 @@
+Country,Grid-04,Grid-08,Grid-12
+Afghanistan,0,0,0
+Albania,1,1,1
+Algeria,2,2,2
+Angola,3,3,3
+Antigua and Barbuda,0,4,4
+Argentina,1,5,5
+Armenia,2,6,6
+Aruba,3,7,7
+Australia,0,0,8
+Austria,1,1,9
+Azerbaijan,2,2,10
+Bahamas,3,3,11
+Bahrain,0,4,0
+Bangladesh,1,5,1
+Barbados,2,6,2
+Belarus,3,7,3
+Belgium,0,0,4
+Belize,1,1,5
+Benin,2,2,6
+Bermuda,3,3,7
+Bhutan,0,4,8
+Bolivia,1,5,9
+Bosnia and Herzegovina,2,6,10
+Botswana,3,7,11
+Brazil,0,0,0
+Brunei,1,1,1
+Bulgaria,2,2,2
+Burkina Faso,3,3,3
+Burundi,0,4,4
+Cabo Verde,1,5,5
+Cambodia,2,6,6
+Cameroon,3,7,7
+Canada,0,0,8
+Cayman Islands,1,1,9
+Central African Republic,2,2,10
+Chad,3,3,11
+Chile,0,4,0
+China,1,5,1
+Colombia,2,6,2
+Comoros,3,7,3
+Congo,0,0,4
+Congo DR,1,1,5
+Cook Islands,2,2,6
+Costa Rica,3,3,7
+Cote d'Ivoire,0,4,8
+Croatia,1,5,9
+Cuba,2,6,10
+Cyprus,3,7,11
+Czech Republic,0,0,0
+Denmark,1,1,1
+Djibouti,2,2,2
+Dominica,3,3,3
+Dominican Republic,0,4,4
+Ecuador,1,5,5
+Egypt,2,6,6
+El Salvador,3,7,7
+Equatorial Guinea,0,0,8
+Eritrea,1,1,9
+Estonia,2,2,10
+Ethiopia,3,3,11
+Fiji,0,4,0
+Finland,1,5,1
+France,2,6,2
+French Guiana,3,7,3
+French Polynesia,0,0,4
+Gabon,1,1,5
+Gambia,2,2,6
+Georgia,3,3,7
+Germany,0,4,8
+Ghana,1,5,9
+Greece,2,6,10
+Grenada,3,7,11
+Guadeloupe,0,0,0
+Guatemala,1,1,1
+Guinea,2,2,2
+Guinea-Bissau,3,3,3
+Guyana,0,4,4
+Haiti,1,5,5
+Honduras,2,6,6
+Hungary,3,7,7
+India,0,0,8
+Indonesia,1,1,9
+Iran,2,2,10
+Iraq,3,3,11
+Ireland,0,4,0
+Israel,1,5,1
+Italy,2,6,2
+Jamaica,3,7,3
+Japan,0,0,4
+Jordan,1,1,5
+Kazakhstan,2,2,6
+Kenya,3,3,7
+Kuwait,0,4,8
+Kyrgyzstan,1,5,9
+Laos,2,6,10
+Latvia,3,7,11
+Lebanon,0,0,0
+Lesotho,1,1,1
+Liberia,2,2,2
+Libya,3,3,3
+Lithuania,0,4,4
+Luxembourg,1,5,5
+Macedonia,2,6,6
+Madagascar,3,7,7
+Malawi,0,0,8
+Malaysia,1,1,9
+Mali,2,2,10
+Malta,3,3,11
+Martinique,0,4,0
+Mauritania,1,5,1
+Mauritius,2,6,2
+Mexico,3,7,3
+Moldova,0,0,4
+Mongolia,1,1,5
+Montenegro,2,2,6
+Montserrat,3,3,7
+Morocco,0,4,8
+Mozambique,1,5,9
+Myanmar,2,6,10
+Namibia,3,7,11
+Nepal,0,0,0
+Netherlands,1,1,1
+New Zealand,2,2,2
+Nicaragua,3,3,3
+Niger,0,4,4
+Nigeria,1,5,5
+North Korea,2,6,6
+Norway,3,7,7
+Oman,0,0,8
+Pakistan,1,1,9
+Panama,2,2,10
+Papua New Guinea,3,3,11
+Paraguay,0,4,0
+Peru,1,5,1
+Philippines,2,6,2
+Poland,3,7,3
+Portugal,0,0,4
+Qatar,1,1,5
+Reunion,2,2,6
+Romania,3,3,7
+Russia,0,4,8
+Rwanda,1,5,9
+Samoa,2,6,10
+Sao Tome and Principe,3,7,11
+Saudi Arabia,0,0,0
+Senegal,1,1,1
+Serbia,2,2,2
+Sierra Leone,3,3,3
+Singapore,0,4,4
+Slovakia,1,5,5
+Slovenia,2,6,6
+Solomon Islands,3,7,7
+Somalia,0,0,8
+South Africa,1,1,9
+South Korea,2,2,10
+South Sudan,3,3,11
+Spain,0,4,0
+Sri Lanka,1,5,1
+St. Lucia,2,6,2
+Sudan,3,7,3
+Suriname,0,0,4
+Swaziland,1,1,5
+Sweden,2,2,6
+Switzerland,3,3,7
+Syria,0,4,8
+Tajikistan,1,5,9
+Tanzania,2,6,10
+Thailand,3,7,11
+Timor-Leste,0,0,0
+Togo,1,1,1
+Tonga,2,2,2
+Trinidad and Tobago,3,3,3
+Tunisia,0,4,4
+Turkey,1,5,5
+Turkmenistan,2,6,6
+Uganda,3,7,7
+Ukraine,0,0,8
+United Arab Emirates,1,1,9
+United Kingdom,2,2,10
+United States,3,3,11
+Uruguay,0,4,0
+Uzbekistan,1,5,1
+Venezuela,2,6,2
+Viet Nam,3,7,3
+Yemen,0,0,4
+Zambia,1,1,5
+Zimbabwe,2,2,6

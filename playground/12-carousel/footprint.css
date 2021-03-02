@@ -1,0 +1,380 @@
+/* ------ The footprint CSS ------ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.frame {
+    margin: auto;
+    width: 96%;
+}
+
+/* ------ Header ------ */
+
+.headerTitle {
+    margin: 0;
+    margin-top: 1.5em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.headerSubtitle {
+    margin: 0;
+    padding-bottom: 6px;
+}
+
+.headerSubtitleText {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+/* ------ Control ------ */
+
+.control {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 12px;
+    color: black; /* #454f54; /* #373f43; */
+}
+
+.controlGroup {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 18px;
+    margin-right: 18px;
+    padding: 0px;
+}
+
+.controlTitle {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    font-weight: bold;
+}
+
+.controlPair {
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+.control input[type="radio"] {
+    margin-top: 5px;
+    margin-left: 6px;
+    margin-right: 2px;
+    width: 9px;
+    height: 9px;
+}
+
+input[type="radio"]:checked {
+    background-image: none!important;
+    background-color: #595959; /* #747a7d; */
+    border: 1px solid #595959; /*#747a7d;*/
+}
+
+input[type="radio"]:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 5px;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:focus {
+    box-shadow: none;
+}
+
+
+/* ------ Footer ------ */
+
+hr {
+    color: black;
+    font-weight: bolder;
+}
+
+.footer {
+    flex-shrink: 0;
+    margin-top: 0em;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 11px;
+}
+
+.footerArea {
+    margin-bottom: 1em;
+    font-size: 12px;
+    color: black;
+}
+
+/* Important keep order: link, visited, hover, active, focus */
+a {
+    text-decoration: none;
+    color: #666666;
+}
+a:link {
+    color: #666666;
+}
+a:visited {
+    color: #666666;
+}
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+a:active {
+    color: black;
+}
+
+.footerBtn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #666666;
+}
+.footerBtn:hover {
+    color: black;
+    text-decoration: underline;
+}
+.footerBtn:active {
+    border: none;
+}
+.footerBtn:visited {
+    border: none;
+}
+.footerBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* ------ Footer Save ------
+
+hr {
+    color: black;
+    font-weight: bolder;
+}
+
+.footer {
+    flex-shrink: 0;
+    margin-top: 0em;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 11px;
+}
+
+.footerArea {
+    margin-bottom: 1em;
+    font-size: 12px
+}
+
+a {
+    text-decoration: none;
+    color: SteelBlue;
+}
+a:link {
+    color: SteelBlue;
+}
+a:visited {
+    color: SteelBlue;
+}
+a:hover {
+    color: SteelBlue;
+    text-decoration: underline;
+}
+a:active {
+    color: SteelBlue;
+}
+
+.footerBtn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: SteelBlue;
+}
+.footerBtn:hover {
+    color: SteelBlue;
+    text-decoration: underline;
+}
+.footerBtn:active {
+    border: none;
+}
+.footerBtn:visited {
+    border: none;
+}
+.footerBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+*/
+
+/* ------- Charts ------ */
+
+#charts {
+    margin-top: 6px;
+}
+
+.title {
+    font-family: "Noto Sans";
+    font-weight: 500;
+}
+.title.large {
+    font-size: 24px;
+}
+.title.medium {
+    font-size: 16px;
+}
+.title.small {
+    font-size: 10px;
+}
+
+.subtitle {
+    font-family: "Noto Sans";
+    font-weight: normal;
+}
+.subtitle.large {
+    margin-top: 12px;
+    font-size: 12px;
+}
+.subtitle.medium {
+    font-size: 8px;
+}
+.subtitle.small {
+    font-size: 6px;
+}
+
+.value {
+    font-family: "Noto Sans";
+    font-weight: 700;
+}
+
+.value.large {
+    font-size: 60px;
+}
+.value.large.a {
+    font-size: 30px;
+}
+.value.large.b {
+    font-size: 38px;
+}
+.value.large.c {
+    font-size: 46px;
+}
+.value.large.d {
+    font-size: 54px;
+}
+.value.large.e {
+    font-size: 62px;
+}
+.value.large.f {
+    font-size: 70px;
+}
+
+.value.medium {
+    font-size: 30px;
+}
+.value.medium.a {
+    font-size: 16px;
+}
+.value.medium.b {
+    font-size: 20px;
+}
+.value.medium.c {
+    font-size: 24px;
+}
+.value.medium.d {
+    font-size: 28px;
+}
+.value.medium.e {
+    font-size: 32px;
+}
+.value.medium.f {
+    font-size: 36px;
+}
+
+.value.small {
+    font-size: 15px;
+}
+.value.small.a {
+    font-size: 8px;
+}
+.value.small.b {
+    font-size: 10px;
+}
+.value.small.c {
+    font-size: 12px;
+}
+.value.small.d {
+    font-size: 14px;
+}
+.value.small.e {
+    font-size: 16px;
+}
+.value.small.f {
+    font-size: 18px;
+}
+
+.xAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.xAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.xAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.xAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}
+
+.yAxis line {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis path {
+    stroke: silver;
+    stroke-width: 0.3
+}
+.yAxis.large text {
+    fill: silver;
+    font-size: 12px;
+}
+.yAxis.medium text {
+    fill: silver;
+    font-size: 8px;
+}
+.yAxis.small text {
+    fill: silver;
+    font-size: 6px;
+}
