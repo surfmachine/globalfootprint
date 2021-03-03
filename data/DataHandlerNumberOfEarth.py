@@ -69,6 +69,16 @@ class Record():
             return False
         return True
 
+    def is_mainregion(self):
+        if self.code >= 2000:
+            return True
+        return False
+
+    def is_subregion(self):
+        if self.code >= 1000 and self.code < 2000:
+            return True
+        return False
+
     def is_world(self):
         if self.code == 5001:
             return True
@@ -141,6 +151,19 @@ class DataHandlerNumberOfEarth():
         for entry in entries:
             rec = Record(entry)
             if rec.is_country() and not rec.iso in filter:
+                names.append(rec.name)
+        names.sort()
+        return names
+
+    def read_country_and_main_region_names(self, year=2017, filter=[]):
+        entries = self.read_json(year)
+        names = []
+        for entry in entries:
+            rec = Record(entry)
+            if rec.is_country() and not rec.iso in filter:
+                names.append(rec.name)
+                continue
+            if rec.is_mainregion():
                 names.append(rec.name)
         names.sort()
         return names

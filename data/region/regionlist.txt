@@ -1,5 +1,4 @@
 
-"""Regions
     Code    Country
 
     1000 Australia/New Zealand
@@ -21,12 +20,14 @@
     1019 Western Africa
     1020 Western Asia
     1021 Western Europe
+
     2000 Africa
     2001 Asia
     2002 Europe
     2003 Latin America/Caribbean
     2004 North America
     2005 Oceania
+
     5001 World
 
     Links
@@ -34,6 +35,5 @@
     https://www.internetworldstats.com/
     https://en.wikipedia.org/wiki/United_Nations_geoscheme
 
-"""
 
 

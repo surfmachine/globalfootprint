@@ -103,7 +103,7 @@ function render() {
 function renderCountries(count, chart) {
 
     // let file = "data/number-of-earth-all.json";
-    let file = "data/number-of-earth-region.json";
+    let file = "data/number-of-earth-all-region.json";
 
     if (chart.chart == "hist") {
         if (chart.order == "best") {
@@ -150,7 +150,7 @@ function renderCountries(count, chart) {
  * @return {number}
  */
 function selectChartCount() {
-    return 180;
+    return 187; // 180;
 }
 
 /**
@@ -371,8 +371,7 @@ function renderCountry(id, country, chart) {
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     //
     // title & subtitle
