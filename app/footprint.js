@@ -102,8 +102,8 @@ function render() {
  */
 function renderCountries(count, chart) {
 
-    let file = "data/number-of-earth-all.json";
-    // file = "data/number-of-earth-region.json";
+    // let file = "data/number-of-earth-all.json";
+    let file = "data/number-of-earth-region.json";
 
     if (chart.chart == "hist") {
         if (chart.order == "best") {

@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 import numpy as np
 from data.DataHandlerNumberOfEarth import DataHandlerNumberOfEarth
@@ -136,6 +137,8 @@ for c in countries:
 json = { 'countries' : countries }
 file = dataHandler.get_transform_file("region", extension=".json")
 dataHandler.write_json(json, file)
+
+sys.exit(0)
 
 print("")
 print("-------------------- Best --------------------")

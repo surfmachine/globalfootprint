@@ -1,0 +1,39 @@
+
+"""Regions
+    Code    Country
+
+    1000 Australia/New Zealand
+    1001 Caribbean
+    1002 Central America
+    1003 Central Asia
+    1004 Eastern Africa
+    1005 Eastern Asia
+    1006 Eastern Europe
+    1007 Melanesia
+    1009 Middle Africa
+    1011 Northern Africa
+    1012 Northern Europe
+    1014 South America
+    1015 SouthEast Asia
+    1016 Southern Africa
+    1017 Southern Asia
+    1018 Southern Europe
+    1019 Western Africa
+    1020 Western Asia
+    1021 Western Europe
+    2000 Africa
+    2001 Asia
+    2002 Europe
+    2003 Latin America/Caribbean
+    2004 North America
+    2005 Oceania
+    5001 World
+
+    Links
+    https://en.wikipedia.org/wiki/United_Nations_geoscheme
+    https://www.internetworldstats.com/
+    https://en.wikipedia.org/wiki/United_Nations_geoscheme
+
+"""
+
+
