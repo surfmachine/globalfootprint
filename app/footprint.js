@@ -24,6 +24,8 @@ let strokeColors = {
     'fill'     : {'bellow':'#0b4d94', 'above':'crimson' }
 };
 
+let regionStyle = "border: 1px solid black; padding-left:6px";
+
 //
 // The option controls
 //
@@ -49,7 +51,7 @@ let abcOrder   = {'id':'abcOrder',   'value':'abc',   'label':'A-Z',  'checked':
 let bestOrder  = {'id':'bestOrder',  'value':'best',  'label':'Best', 'checked':'' };
 let worstOrder = {'id':'worstOrder', 'value':'worst', 'label':'Worst','checked':'' };
 let regionOrder= {'id':'regionOrder','value':'region','label':'Region','checked':'' };
-let orderOpt   = {'title':'Order', 'name':'order', 'items':[abcOrder, bestOrder, worstOrder, regionOrder ] }
+let orderOpt   = {'title':'Order', 'name':'order', 'items':[abcOrder, bestOrder, regionOrder ] }
 
 let barColor   = {'id':'barColor', 'value':'bar', 'label':'Accessible', 'checked':'checked' }; // barrier-free
 let sigColor   = {'id':'sigColor', 'value':'sig', 'label':'Signal',     'checked':'' };
@@ -129,18 +131,16 @@ function renderCountries(count, chart) {
             id = "#chart" + i;
             country = data.countries[i]
 
-            // TODO ti@work
             // add border to the region charts
             if (chart.order == "region") {
                 if (country.region.chart) {
-                    d3.select(id).attr("style", "border: 1px solid silver")
+                    d3.select(id).attr("style", regionStyle);
                 }
             }
 
             // render charts
             if (chart.chart == 'hist') {
                 renderCountry(id, country, chart);
-
             } else {
                 renderCountryRec(id, country, chart);
             }
@@ -325,8 +325,8 @@ function selectChartOptions() {
         chart.order = "abc";
     } else if ( document.getElementById("bestOrder").checked ) {
         chart.order = "best";
-    } else if ( document.getElementById("worstOrder").checked ) {
-        chart.order = "worst"
+    // } else if ( document.getElementById("worstOrder").checked ) {
+    //    chart.order = "worst"
     } else {
         chart.order = "region";
     }
@@ -555,7 +555,7 @@ function renderCountryRec(id, country, chart) {
 
     // init chart data
     var margin = {top: chart.size.top, right: chart.size.right, bottom: chart.size.bottom, left: chart.size.left},
-        width  = chart.size.width  - margin.left - margin.right - 12,
+        width  = chart.size.width  - margin.left - margin.right - 24,
         height = chart.size.height - margin.top  - margin.bottom;
 
 
@@ -630,7 +630,7 @@ function renderRectangleRough(svg, width, height, stroke, fill, chart, value) {
     // let node= rc.rectangle(0, 0, width, height,
     //     {stroke: stroke, strokeWidth: chart.size.nr, roughness: chart.size.nr, fill: fill, fillWeight: chart.size.nr * factor, fillStyle: "hachure"});
 
-    let node= rc.rectangle(0, 0, width, height,
+    let node= rc.rectangle(0, 1, width, height,
         {stroke: stroke, strokeWidth: chart.size.nr, roughness: 0, bowing: 0, fill: fill, fillWeight: chart.size.nr * factor, fillStyle: "hachure"});
 
     svg.selectAll("g")

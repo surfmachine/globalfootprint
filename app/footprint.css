@@ -74,6 +74,10 @@ h1 {
     font-weight: bold;
 }
 
+.infoTag {
+    font-weight: bold;
+}
+
 a.infoLink  {
     color: black;
     text-decoration: underline;
