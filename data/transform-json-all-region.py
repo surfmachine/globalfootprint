@@ -24,6 +24,7 @@ def lookupRegionMap(name):
         print("lookupRegionCode failed for: [" + name + "]")
     return regionCode
 
+regionNames = ["Africa","Asia","Europe","Latin America/Caribbean", "North America", "Oceania", "World"];
 
 # -------------------------------------------------------------------------------------------------
 # init settings and data handler
@@ -115,6 +116,9 @@ for year in dataHandler.years:
 #   last      = the volue of the last available year
 #   avg       = the average value of the from/to range
 # - data      = list of all data records (dict with year and value) of the current country
+# - region    = information for the region order. CAUTION: this field is only in the region file available
+#   code      = the region code, used to sort the records
+#   chart     = flag indication if it is the region chart (True) or one of the regions countries (False)
 #
 countries = []
 for country, row in df.iterrows():
@@ -141,12 +145,13 @@ for country, row in df.iterrows():
     lastValue=  data[len(data) - 1]['value']
     avgValue = sum/cnt
     regionCode = lookupRegionMap(country)
+    regionChart= True if country in regionNames else False
     countries.append({
         'country' : country,
         'year'    : {'from': fromYear,  'to': toYear,  'min': minYear,  'max': maxYear},
         'value'   : {'from': fromValue, 'to': toValue, 'min': minValue, 'max': maxValue, 'last': lastValue, 'avg': avgValue},
         'data'    : data,
-        'region'  : regionCode
+        'region'  : {'code': regionCode,'chart': regionChart }
     })
 
 #
@@ -155,9 +160,11 @@ for country, row in df.iterrows():
 
 print("")
 print("-------------------- Best --------------------")
-countries.sort(key=lambda c: c['region'], reverse=False)
+countries.sort(key=lambda c: (c['region']['code'], not c['region']['chart'], c['country']), reverse=False)
 for c in countries:
-   print(round(c['value']['last'],2), " : ", c['country'],)
+    if c['region']['chart']:
+        print("---")
+    print(c['region']['code'], " : ", c['country'])
 
 json = { 'countries' : countries }
 file = dataHandler.get_transform_file("all-region", extension=".json")

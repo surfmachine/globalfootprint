@@ -45,10 +45,11 @@ let relScale   = {'id':'relScale', 'value':'rel', 'label':'Individual', 'checked
 let absScale   = {'id':'absScale', 'value':'abs', 'label':'Compare', 'checked':'' };
 let scaleOpt   = {'title':'Scale', 'name':'scale', 'items':[relScale, absScale ] }
 
-let abcOrder   = {'id':'abcOrder',  'value':'abc',  'label':'A-Z',  'checked':'checked' };
-let bestOrder  = {'id':'bestOrder', 'value':'best', 'label':'Best', 'checked':'' };
-let worstOrder = {'id':'worstOrder','value':'worst','label':'Worst','checked':'' };
-let orderOpt   = {'title':'Order', 'name':'order', 'items':[abcOrder, bestOrder, worstOrder ] }
+let abcOrder   = {'id':'abcOrder',   'value':'abc',   'label':'A-Z',  'checked':'checked' };
+let bestOrder  = {'id':'bestOrder',  'value':'best',  'label':'Best', 'checked':'' };
+let worstOrder = {'id':'worstOrder', 'value':'worst', 'label':'Worst','checked':'' };
+let regionOrder= {'id':'regionOrder','value':'region','label':'Region','checked':'' };
+let orderOpt   = {'title':'Order', 'name':'order', 'items':[abcOrder, bestOrder, worstOrder, regionOrder ] }
 
 let barColor   = {'id':'barColor', 'value':'bar', 'label':'Accessible', 'checked':'checked' }; // barrier-free
 let sigColor   = {'id':'sigColor', 'value':'sig', 'label':'Signal',     'checked':'' };
@@ -102,25 +103,25 @@ function render() {
  */
 function renderCountries(count, chart) {
 
-    // let file = "data/number-of-earth-all.json";
-    let file = "data/number-of-earth-all-region.json";
+    let file = "data/number-of-earth-all.json";
 
     if (chart.chart == "hist") {
         if (chart.order == "best") {
             file = "data/number-of-earth-all-best-avg.json";
         } else if (chart.order == "worst") {
             file = "data/number-of-earth-all-worst-avg.json";
+        } else if (chart.order == "region") {
+            file = "data/number-of-earth-all-region.json";
         }
     } else {
         if (chart.order == "best") {
             file = "data/number-of-earth-all-best.json";
         } else if (chart.order == "worst") {
             file = "data/number-of-earth-all-worst.json";
+        } else if (chart.order == "region") {
+            file = "data/number-of-earth-all-region.json";
         }
     }
-
-    console.log("Load data from file:");
-    console.log(file);
 
     d3.json(file, function (data) {
         // d3.json("data/number-of-earth-world.json", function (data){
@@ -128,13 +129,21 @@ function renderCountries(count, chart) {
             id = "#chart" + i;
             country = data.countries[i]
 
+            // TODO ti@work
+            // add border to the region charts
+            if (chart.order == "region") {
+                if (country.region.chart) {
+                    d3.select(id).attr("style", "border: 1px solid silver")
+                }
+            }
+
+            // render charts
             if (chart.chart == 'hist') {
                 renderCountry(id, country, chart);
 
             } else {
                 renderCountryRec(id, country, chart);
             }
-
 
         }
     })
@@ -316,8 +325,10 @@ function selectChartOptions() {
         chart.order = "abc";
     } else if ( document.getElementById("bestOrder").checked ) {
         chart.order = "best";
+    } else if ( document.getElementById("worstOrder").checked ) {
+        chart.order = "worst"
     } else {
-        chart.order = "worst";
+        chart.order = "region";
     }
 
     // set color
@@ -395,6 +406,7 @@ function renderCountry(id, country, chart) {
             .style("text-anchor", "middle")
             .text(subtitle);
     }
+
 
     //
     // x-axis
