@@ -3,6 +3,12 @@
 // ====================================================================================================================
 
 //
+// chart counts
+//
+let DEFAULT_CHART_COUNT = 180;
+let REGION_CHART_COUNT  = 187;
+
+//
 // chart size, visibility and colors
 //
 
@@ -24,7 +30,7 @@ let strokeColors = {
     'fill'     : {'bellow':'#0b4d94', 'above':'crimson' }
 };
 
-let regionStyle = "border: 1px solid black; padding-left:6px";
+let regionStyle = "border: 1px solid #888888;";
 
 //
 // The option controls
@@ -83,8 +89,8 @@ function handleOptionClick(e) {
  */
 function render() {
     // init options
-    let chartCount = selectChartCount();
     let chartOptions = selectChartOptions();
+    let chartCount   = selectChartCount(chartOptions);
 
     // set header subtitle
     setHeaderSubtitle(chartOptions.subtitle)
@@ -158,8 +164,13 @@ function renderCountries(count, chart) {
  * The number of charts to display.
  * @return {number}
  */
-function selectChartCount() {
-    return 187; // 180;
+function selectChartCount(chartOptions) {
+
+    if (chartOptions.order == 'region') {
+        return REGION_CHART_COUNT;
+    }
+
+    return DEFAULT_CHART_COUNT;
 }
 
 /**
@@ -185,6 +196,17 @@ function appendChartElements(chartCount, chartSize) {
         $("#"+id).remove();
         $("#charts").append(elem);
     }
+
+    // clean up region charts if switched to default count
+    if (chartCount == DEFAULT_CHART_COUNT) {
+
+        for (i=chartCount; i<REGION_CHART_COUNT; i++) {
+            let id = "chart" + i;
+            $("#"+id).remove();
+        }
+    }
+
+
 }
 
 function setHeaderSubtitle(subtitle) {
@@ -264,7 +286,7 @@ function createOptionItem(name, item) {
  * - chart    : ['hist', 'current']
  * - subtitle : 'the current subtitle accorging the selected chart'
  * - mode     : ['clean', 'diff', 'fill']
- * - order    : ['abc', 'best', 'worst']
+ * - order    : ['abc', 'best', 'region']
  * - scale    : ['abs', 'rel']
  * - size     : {class, width, height, xTicks, yTicks, ySubtitleOffset} with class: ['large', 'medium', 'small']
  * - vis      : {title, subtitle, threshold, xAxis, yAxis}
