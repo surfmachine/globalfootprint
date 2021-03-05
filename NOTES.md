@@ -151,6 +151,10 @@ Farben
 - https://www.washingtonpost.com/graphics/2020/world/corona-simulator/ 
 
 ### Besipiele Website
+- https://informationisbeautiful.net/
+- https://informationisbeautiful.net/visualizations/
+- https://informationisbeautiful.net/visualizations/how-many-gigatons-of-co2/ 
+- how-to-reduce-the-worlds-carbon-footprint-by-2050/ 
 - http://juerglehni.com			        *****
 - http://feltron.com/			        *****
 - http://emphase.ch/			        ***** 	
