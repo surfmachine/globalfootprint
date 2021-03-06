@@ -48,19 +48,20 @@ h1 {
 /* ------ info ------ */
 
 .info {
-    margin: 12px;
+    margin-bottom: 12px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 12px;
-    padding-bottom: 0px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-.infoTeaserPanel {
+.infoTeaserPanel p {
     margin-bottom: 0px;
 }
 
+
 .infoTeaser {
+    margin-bottom: 0px;
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
@@ -75,7 +76,7 @@ h1 {
 }
 
 .infoTag {
-    font-weight: bold;
+    color: crimson;
 }
 
 a.infoLink  {
@@ -238,6 +239,11 @@ a:active {
 .impressumSubtitle {
     color: #D3D3D3;
 }
+
+.impressumTag {
+    color: #A8A8A8;
+}
+
 
 /* ------- Charts ------ */
 
