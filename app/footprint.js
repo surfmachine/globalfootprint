@@ -35,8 +35,8 @@ let regionStyle = "border: 1px solid #888888;";
 //
 // The option controls
 //
-let chartHist = {'id':'histChart', 'value':'hist', 'label':'Over time', 'checked':'' };
-let chartCurr = {'id':'currChart', 'value':'curr', 'label':'Current', 'checked':'checked' };
+let chartHist = {'id':'histChart', 'value':'hist', 'label':'Over time', 'checked':'checked' };
+let chartCurr = {'id':'currChart', 'value':'curr', 'label':'Current', 'checked':'' };
 let chartOpt  = {'title':'Chart', 'name':'chart', 'items':[chartCurr, chartHist] }
 
 let sizeSmall  = {'id':'sSize', 'value':'s', 'label':'S', 'checked':'checked' };
@@ -45,8 +45,8 @@ let sizeLarge  = {'id':'lSize', 'value':'l', 'label':'L', 'checked':'' };
 let sizeOpt    = {'title':'Size', 'name':'size', 'items':[sizeSmall, sizeMedium, sizeLarge ] }
 
 let cleanMode  = {'id':'cleanMode', 'value':'clean', 'label':'Plain', 'checked':'' };
-let diffMode   = {'id':'diffMode',  'value':'diff',  'label':'Diff',  'checked':'' };
-let fillMode   = {'id':'fillMode',  'value':'fill',  'label':'Fill',  'checked':'checked' };
+let diffMode   = {'id':'diffMode',  'value':'diff',  'label':'Diff',  'checked':'checked' };
+let fillMode   = {'id':'fillMode',  'value':'fill',  'label':'Fill',  'checked':'' };
 let modeOpt    = {'title':'Mode', 'name':'mode', 'items':[cleanMode, diffMode, fillMode ] }
 
 let relScale   = {'id':'relScale', 'value':'rel', 'label':'Individual', 'checked':'checked' };
