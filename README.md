@@ -1,8 +1,8 @@
-# globalfootprint.ch 
+# [Global Footprint](globalfootprint.ch)
 Author project  of the Certificate of Advanced Studies in Data Visualization at the <a href="https://www.hkb.bfh.ch/" target="_blank">HKB</a> in Berne.<br />Q1/2021, Thomas Iten
 
 
-The project contains the source Code of the **globalfootprint.ch** web site. The web site presents various **visualizations** of the global footprint metric **number of earths**. 
+The project contains the source Code of the [globalgootprint.ch](globalfootprint.ch) web site. The web site presents various **visualizations** of the global footprint metric **number of earths**. 
 
 
 ## Number of earth
