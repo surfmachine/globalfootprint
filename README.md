@@ -1,50 +1,34 @@
-# The globalfootprint.ch web applicaton
-Q1/2021, Thomas Iten
+# globalfootprint.ch 
+Author project  of the Certificate of Advanced Studies in Data Visualization at the <a href="https://www.hkb.bfh.ch/" target="_blank">HKB</a> in Berne.<br />Q1/2021, Thomas Iten
 
-This website has been created as part of a Certificate of Advanced Studies in Data Visualization
-at the <a href="https://www.hkb.bfh.ch/" target="_blank">HKB</a> in Berne.
+
+The project contains the source Code of the **globalfootprint.ch** web site. The web site presents various **visualizations** of the global footprint metric **number of earths**. 
+
+
+## Number of earth
+
+The number of earth is a key figure showing the ecological footprint of a country, a region or the world. The metric measures how much nature we have and how much we use.
+
+We have one earth and if the key figure is above, we are using more resources, than the earth can regenerate in one year. Like this, the number of earth figure shows if the resource demand of a country is sustainable or not.
+
+**Improve**
+The footprint helps countries to improve sustainability and well-being as well as individuals to understand their impact on the planet. For further details see:
+- [Footprint Network Homepage](https://www.footprintnetwork.org/)
+- [Ecological Footprint of Countries Video](https://www.overshootday.org/lesson-what-day-is-earth-overshootday-2017)
+
+    
+    
 
 ## Project folders
 
-### App
-The www.globalfootprint.ch web application. To keep the project small and simple, no big and heavy
-Web Framework is used. The site only uses HTML, CSS with Bootstrap and JavaScript with JQuery.
-
-### Data
-The original data in the download folder, together with some Python scripts for preparing the 
-web site data in the transform folder.     
-
-### Playground
-Tests and experiments for some web site parts or diagrams. 
-
-- 01 Data Data Visualization
-  - D3 chart samples<br />
-    https://github.com/alod83/dj-infouma/tree/master/DataVisualization
-  - How to build a basic line in D3.js<br />
-    https://towardsdatascience.com/how-to-build-a-basic-line-in-d3-js-38f67055043f
-
-- 02 Making a Line Chart in D3<br />
-  https://datawanderings.com/2019/10/28/tutorial-making-a-line-chart-in-d3-js-v-5/
-
-- 03 Footprint<br />
-   First Global Footprint Sample with some variations in size, mode, scale and axis visibility.
-
-- 04 Bootstrap Controls<br />
-  Collapse, Button and Radion Button Group samples with Bootstrap Version 5.
-   
-- 05 Footer<br /> 
-  Some footer variations for the website.
-
-- 10 handwritten<br /> 
-  D3 charts in a handwritten style.
-
-- 11 rough<br />
-  Rough.js handwirtten styled charts used within the website.   
-
-### Test
-Some simple Python tests.
-
-
+Folder       | Content
+------------ | -----------------------------------------------------------------
+app          | The www.globalfootprint.ch web application. To keep the project small and simple, no big and heavy Web Framework is used. The site only uses HTML, CSS with Bootstrap and JavaScript with JQuery.
+data         |  The original data in the download folder, together with some Python scripts for preparing the web site data in the transform folder.     
+playground   | Tests and experiments for some web site parts or diagrams. 
+test         | Python tests
+work         | Working notes and snippets
+  
 
 ## HTML Resourcen
 
@@ -134,88 +118,6 @@ Anstelle URL
   - Coole Link Effekte
     https://codepen.io/hafizfattah/pen/tkgyK 
     
-## Snippets
 
-### y-axis text label 
-```
-svg.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left / 2)
-    .attr("x", 0 - (height / 2))
-    .attr("dy", "1em") //The dy attribute indicates a shift along the y-axis on the position of an element or its content.
-    .attr("font-size", "12px")
-    .style("text-anchor", "middle")
-    .text("Number of earth");
-```
-
-### Options with Grid
-```
-/**
- * Create a grid element with an option.
- *
- * @param option The option record with: {title, name, items} where items is a list of:{id, value, label, checked}
- * @param grids The grid number for large, medium and small, like [3,3,12].
- * @returns The html option element.
- */
-function createOption2(option, grids) {
-    let buf = [];
-
-    buf.push("<div id=\"" + option.name + "\"  class=\"option col-lg-" + grids[0] + " col-md-" + grids[1] + " col-sm-" + grids[2] + "\">");
-
-    buf.push("<b>" + option.title +"</b>");
-    option.items.forEach(function (item) {
-        buf.push(createOptionItem(option.name, item))
-    });
-
-    buf.push("</div>");
-
-    return buf.join("");
-}
-
-/**
- * Create a single option item.
- *
- * @param name The name of the option (all option of a group have the same name).
- * @param item The item: {id, value, label, checked}
- * @returns The html option element item.
- */
-function createOptionItem2(name, item) {
-    let buf = [];
-
-    buf.push("<label class=\"radio-inline\">");
-    buf.push("<input id=" + item.id + " type=\"radio\" name=" + name + " value=" + item.value + " ");
-    buf.push("onclick=\"handleOptionClick(this)\" ");
-    buf.push(item.checked);
-    buf.push("> " + item.label + "</label>");
-
-    return buf.join("");
-
-}
-
-```
-
-### Control with no border and background
-```
-.controlGroup {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 18px;
-    margin-right: 18px;
-    padding: 0px;
-}
-
-.controlTitle {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    font-weight: bold;
-}
-
-.controlPair {
-    margin-right: 0px;
-    padding-left: 0px;
-}
-```    
-    
 ---
 _The end._
